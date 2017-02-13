@@ -130,6 +130,8 @@ usb_phy0: usb-phy {
       };
       axi_dma_adc_1: dma@40400000 {
          #dma-cells = <1>;
+         clock-names = "s_axi_lite_aclk", "m_axi_sg_aclk", "m_axi_s2mm_aclk";
+         clocks = <&clkc 15>, <&clkc 15>, <&clkc 15>;
          compatible = "xlnx,axi-dma-1.00.a";
          interrupt-parent = <&intc>;
          interrupts = <0 29 4>;
@@ -144,6 +146,8 @@ usb_phy0: usb-phy {
       };
       axi_dma_adc_2: dma@40410000 {
          #dma-cells = <1>;
+         clock-names = "s_axi_lite_aclk", "m_axi_sg_aclk", "m_axi_s2mm_aclk";
+         clocks = <&clkc 15>, <&clkc 15>, <&clkc 15>;
          compatible = "xlnx,axi-dma-1.00.a";
          interrupt-parent = <&intc>;
          interrupts = <0 30 4>;
